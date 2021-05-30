@@ -23,5 +23,9 @@
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "faunadb": "^4.3.0",
+    "worktop": "^0.7.0"
   }
 }
