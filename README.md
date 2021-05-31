@@ -21,13 +21,13 @@
 
 **Base URL:** `https://cloudflare-workers-faunadb-crud.mathcale.workers.dev`
 
-| Route      | Method | Description                | Headers                                                        | Request model              | Response model                 |
-| ---------- | ------ | -------------------------- | -------------------------------------------------------------- | -------------------------- | ------------------------------ |
-| /todos     | GET    | List all todos             | `Accept: application/json`                                     | -                          | [View model](#get-todos-res)   |
-| /todos/:id | GET    | Get todo data by its ID    | `Accept: application/json`                                     | -                          | [View model](#get-todo-res)    |
-| /todos     | POST   | Create new todo            | `Content-Type: application/json`<br>`Accept: application/json` | [View model](#create-todo) | [View model](#create-todo-res) |
-| /todos/:id | PATCH  | Set todo completion status | `Content-Type: application/json`<br>`Accept: application/json` | [View model](#edit-todo)   | [View model](#edit-todo-res)   |
-| /todos/:id | DELETE | Delete todo                | `Accept: application/json`                                     | -                          | -                              |
+| Route      | Method | Description                | Headers                                                        | Request model                | Response model                 |
+| ---------- | ------ | -------------------------- | -------------------------------------------------------------- | ---------------------------- | ------------------------------ |
+| /todos     | GET    | List all todos             | `Accept: application/json`                                     | -                            | [View model](#get-todos)       |
+| /todos/:id | GET    | Get todo data by its ID    | `Accept: application/json`                                     | -                            | [View model](#get-todosid)     |
+| /todos     | POST   | Create new todo            | `Content-Type: application/json`<br>`Accept: application/json` | [View model](#post-todos)    | [View model](#post-todos-1)    |
+| /todos/:id | PATCH  | Set todo completion status | `Content-Type: application/json`<br>`Accept: application/json` | [View model](#patch-todosid) | [View model](#patch-todosid-1) |
+| /todos/:id | DELETE | Delete todo                | `Accept: application/json`                                     | -                            | -                              |
 
 ## Request models
 
