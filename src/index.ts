@@ -1,21 +1,14 @@
 // @ts-ignore
 import { ThrowableRouter, withContent, withParams, status, missing } from 'itty-router-extras';
-import faunadb from 'faunadb';
 
-import { customFetch, getFaunaError } from './utils/customFetch';
+import faunaClient, { query } from './db/fauna';
+import { getFaunaError } from './utils/customFetch';
 import type { Todo, CreateTodoRequest, EditTodoRequest } from './types';
 
 const router = ThrowableRouter({ base: '/todos' });
 
-const faunaClient = new faunadb.Client({
-  // @ts-ignore
-  secret: FAUNADB_SECRET,
-  // @ts-ignore
-  fetch: customFetch,
-});
-
 const { Create, Collection, Get, Ref, Paginate, Let, Var, Update, Map, Documents, Lambda, Delete } =
-  faunadb.query;
+  query;
 
 router.get('/', async () => {
   try {
