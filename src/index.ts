@@ -1,23 +1,9 @@
 // @ts-ignore
 import { ThrowableRouter, withContent, withParams, status, missing } from 'itty-router-extras';
 import faunadb from 'faunadb';
+
 import { customFetch, getFaunaError } from './utils/customFetch';
-
-interface Todo {
-  id: string;
-  description: string;
-  completed: boolean;
-  createdAt: string;
-  completedAt: string;
-}
-
-interface CreateTodoRequest {
-  description: string;
-}
-
-interface EditTodoRequest {
-  completed: boolean;
-}
+import type { Todo, CreateTodoRequest, EditTodoRequest } from './types';
 
 const router = ThrowableRouter({ base: '/todos' });
 
