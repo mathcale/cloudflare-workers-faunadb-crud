@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "faunadb": "^4.3.0",
-    "worktop": "^0.7.0"
+    "itty-router": "^2.3.9",
+    "itty-router-extras": "^0.4.2"
   }
 }
